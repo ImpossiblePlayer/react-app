@@ -1,23 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Sign_in from './Sign_in';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Мой первый проект на React
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/impossibleplayer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Мой профиль GitHub
-        </a>
-      </header>
+      <Sign_in />
     </div>
   );
 }
