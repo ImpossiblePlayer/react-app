@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 
 // Форма для входа в аккаунт
-const SignInUp = () => {
+const LogInForm = () => {
 	return (
-		<div className="sign-in">
-			<form action="">
+		<div className="SignIn">
+			<form action="" className="SignInForm">
 				<input
-				id=""
 				type="email/tel"
 				placeholder="Введите Email или номер"
 				/>
 				<input
-				id=""
 				type="password"
 				placeholder="Введите пароль"
 				/>
@@ -23,6 +21,6 @@ const SignInUp = () => {
 	);
 }
 
-export default SignInUp;
+export default LogInForm;
 
 // разобраться с инпутами
