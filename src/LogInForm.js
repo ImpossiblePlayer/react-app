@@ -1,22 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react';
+import './LogInForm.css';
 
-// Форма для входа в аккаунт
+const SignIn = () => {
+	return (
+		<form action="" className="SignInForm">
+			<input
+			type="email/tel"
+			placeholder="Введите Email или номер"
+			/>
+			<input
+			type="password"
+			placeholder="Введите пароль"
+			/>
+			<button type="submit">
+				Войти
+			</button>
+		</form>
+	)
+}
+
+// Форма для входа или регистрации
 const LogInForm = () => {
 	return (
 		<div className="SignIn">
-			<form action="" className="SignInForm">
-				<input
-				type="email/tel"
-				placeholder="Введите Email или номер"
-				/>
-				<input
-				type="password"
-				placeholder="Введите пароль"
-				/>
-				<button type="submit">
-					Войти
-				</button>
-			</form>
+			<SignIn />
 		</div>
 	);
 }
