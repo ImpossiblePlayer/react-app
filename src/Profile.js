@@ -1,7 +1,7 @@
 import React from 'react';
-import './LogInForm.css';
+import './Profile.css';
 
-const SignIn = () => {
+const Sidebar = () => {
 	return (
 		<form action="" className="SignInForm">
 			<input
@@ -20,14 +20,12 @@ const SignIn = () => {
 }
 
 // Форма для входа или регистрации
-const LogInForm = () => {
+const Profile = () => {
 	return (
-		<div className="SignIn">
-			<SignIn />
-		</div>
+		<Sidebar />
 	);
 }
 
-export default LogInForm;
+export default Profile;
 
 // разобраться с инпутами

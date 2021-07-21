@@ -1,10 +1,18 @@
+import React from 'react';
 import './App.css';
-import LogInForm from './LogInForm';
+import Header from './components/Header';
+import Sidebar from './components/SideBar';
+// import Profile from './Profile';
 
 const App = () => {
   return (
-    <div className="App">
-      <LogInForm />
+    <div className='App-wrapper'>
+      {/* <Profile /> */}
+      <Header />
+      <Sidebar />
+      <main className='Content'>
+        Основной контент
+      </main>
     </div>
   );
 }
