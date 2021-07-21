@@ -2,12 +2,18 @@ body {
   background-color: #1d1d1d;
 }
 
+a {
+  color: inherit;
+}
+
 ul {
   list-style: none;
+  padding: 0;
 }
 
 .App-wrapper > * {
   background-color: #2e2e53;
+  padding: 10px;
 }
 
 .App-wrapper {
