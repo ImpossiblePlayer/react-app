@@ -1,0 +1,11 @@
+.Header {
+  grid-area: header;
+}
+
+.Logo img {
+  height:40px
+}
+
+.Search_form {
+  background: #000;
+}

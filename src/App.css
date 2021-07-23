@@ -23,8 +23,8 @@ ul {
 
   /* хедэр занимает 2 колонны и одну строку, а сайдбар и мейн - по одной колонне */
   grid-template-areas:
-  "header header"
-  "sidebar main-content";
+    "header header"
+    "sidebar main-content";
 
   /* 2 строки: 60 px и все остальное */
   grid-template-rows: 60px 1fr;
@@ -34,20 +34,4 @@ ul {
 
   /* расстояние между дочерними блоками = 10 пикселей */
   grid-gap: 10px;
-}
-
-.Header {
-  grid-area: header;
-}
-
-.Header > img {
-  height:40px
-}
-
-.Sidebar {
-  grid-area: sidebar;
-}
-
-.Content {
-  grid-area: main-content;
 }

@@ -1,8 +1,9 @@
 import React from "react";
+import styles from './SideBar.module.css';
 
-const Sidebar = () => {
+const SideBar = () => {
   return (
-    <aside className="Sidebar">
+    <aside className={styles.SideBar}>
       <ul>
         <li>
           <a href="">Профиль</a>
@@ -26,4 +27,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;

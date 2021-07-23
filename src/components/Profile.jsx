@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import styles from './Profile.module.css';
 
 const Profile = () => {
   return (
-    <main className='Content'>
-      Основной контент
+    <main className={styles.Content}>
+      
     </main>
   )
 }
