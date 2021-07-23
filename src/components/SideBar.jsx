@@ -1,26 +1,26 @@
 import React from "react";
-import styles from './SideBar.module.css';
+import styles from './SideB.module.css';
 
 const SideBar = () => {
   return (
     <aside className={styles.SideBar}>
-      <ul>
-        <li>
-          <a href="">Профиль</a>
+      <ul className={styles.NavBarGroup}>
+        <li className={styles.NavBarGroup__item}>
+          <a className={styles.NavBarGroup__link} href="">Профиль</a>
         </li>
-        <li>
-          <a href="">Новости</a>
+        <li className={styles.NavBarGroup__item}>
+          <a className={styles.NavBarGroup__link} href="">Новости</a>
         </li>
-        <li>
-          <a href="">Сообщения</a>
+        <li className={styles.NavBarGroup__item}>
+          <a className={styles.NavBarGroup__link} href="">Сообщения</a>
         </li>
-        <li>
-          <a href="">Музыка</a>
+        <li className={styles.NavBarGroup__item}>
+          <a className={styles.NavBarGroup__link} href="">Музыка</a>
         </li>
       </ul>
-      <ul>
-        <li>
-          <a href="">Настройки</a>
+      <ul className={styles.NavBarGroup}>
+        <li className={styles.NavBarGroup__item}>
+          <a className={styles.NavBarGroup__link} href="">Настройки</a>
         </li>
       </ul>
     </aside>

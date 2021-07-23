@@ -1,11 +1,20 @@
 .Header {
   grid-area: header;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .Logo img {
-  height:40px
+  height: 40px
 }
 
 .Search_form {
-  background: #000;
+  background: #ffffff;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.Search_form input {
+  border: none;
 }
