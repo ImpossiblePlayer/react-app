@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './SideB.module.css';
+import styles from './SideBar.module.css';
 
 const SideBar = () => {
   return (

@@ -1,0 +1,14 @@
+.ProfileHeader {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  background: url(
+    "https://global-uploads.webflow.com/5e2d970a86f417102b21abd2/5fb6272c50c16ac33c0e1b06_5f92b527aee25a8c3463dac7_5eaace7e60a79172b8c90108_Blog%2520Hero%2520Image%2520Template%2520(4)-2.jpeg"
+    );
+}
+
+.Logo img {
+  height: 100px;
+  border-radius: 50%;
+}
