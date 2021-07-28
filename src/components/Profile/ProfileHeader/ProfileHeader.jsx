@@ -1,15 +1,18 @@
 import React from "react";
 import styles from "./ProfileHeader.module.css";
-import avatar from "./avatar.jpg";
+import Avatar from "./../../Avatar/Avatar";
 
-const ProfileHeader = () => {
+const ProfileHeader = (props) => {
   return (
-    <header className={styles.ProfileHeader}>
-      <div className={styles.UserNameWrapper}>
-        <div className={styles.Logo}>
-          <img src={avatar} alt={`Аватарка пользователя `} />
-        </div>
-        <h3 className={styles.UserName}>Пронин Иван</h3>
+    <header className={styles.Header}>
+      {/* блок с именем и аватаркой */}
+      <div className={styles.UserInfoWrapper}>
+        <a href="" className={styles.UserAvatar}>
+          {/* аватарка пользователя */}
+          <Avatar />
+        </a>
+        {/* Имя пользователя */}
+        <h3 className={styles.UserName}>{props.name}</h3>
       </div>
     </header>
   );

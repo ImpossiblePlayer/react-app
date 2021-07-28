@@ -1,15 +1,15 @@
 import React from "react";
+import ProfileHeader from './ProfileHeader/ProfileHeader';
 import Allposts from "./AllPosts/AllPosts";
 import styles from "./Profile.module.css";
-import ProfileHeader from './ProfileHeader/ProfileHeader';
 
 const Profile = () => {
-  return (
-    <main className={styles.Content}>
-      <ProfileHeader name='Пронин Иван' />
-      <Allposts />
-    </main>
-  );
+	return (
+		<main className={styles.Content}>
+			<ProfileHeader name='Пронин Иван' />
+			<Allposts />
+		</main>
+	);
 };
 
 export default Profile;
