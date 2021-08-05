@@ -7,7 +7,10 @@ const Header = () => {
       {/* логотип с ссылкой на главную страницу */}
       <div className={styles.Logo}>
         <a href="">
-          <img src="https://react-native-aria.geekyants.com/img/logo-large.png" />
+          <span>
+            <img src="https://react-native-aria.geekyants.com/img/logo-large.png" />
+          </span>
+          <span>Reactive Network</span>
         </a>
       </div>
       {/* форма для поиска */}

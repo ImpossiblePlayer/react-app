@@ -1,0 +1,39 @@
+.Item {
+	font-size: 18px;
+	padding: 10px;
+}
+
+.InfoWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.InfoWrapper > span {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.UserLogo img {
+	height: 50px;
+}
+
+.Stats {
+	font-size: 24px;
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Stats > span {
+	display: flex;
+	align-items: center;
+}
+
+.Stats button {
+	height: 40px;
+	background-color: #1d1d1d;
+	color: #ffffff;
+	border: none;
+	border-radius: 15px;
+	padding: 15px;
+}

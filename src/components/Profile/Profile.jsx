@@ -1,14 +1,17 @@
 import React from "react";
 import ProfileHeader from './ProfileHeader/ProfileHeader';
-import Allposts from "./AllPosts/AllPosts";
+import { Posts } from "./Posts/Posts.jsx";
 import styles from "./Profile.module.css";
 
 const Profile = () => {
 	return (
-		<main className={styles.Content}>
+		<div className={styles.Content}>
+			{/* блок с именем и аватаркой */}
 			<ProfileHeader name='Пронин Иван' />
-			<Allposts />
-		</main>
+
+			{/* блок с постами пользователя и создание нового поста */}
+			<Posts />
+		</div>
 	);
 };
 
