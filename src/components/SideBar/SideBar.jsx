@@ -7,29 +7,29 @@ const SideBar = () => {
 			<ul className={styles.Group}>
 				{/* каждая ссылка меняет URL, а теги '<Route />' в App.js меняют содержимое в зависимости от текущего URL */}
 				<li className={styles.Item}>
-					<a className={styles.Link} href="/profile">
+					<a className={styles.Link} href='/profile'>
 						Профиль
 					</a>
 				</li>
 				<li className={styles.Item}>
-					<a className={styles.Link} href="/messenger">
+					<a className={styles.Link} href='/messenger'>
 						Сообщения
 					</a>
 				</li>
 				<li className={styles.Item}>
-					<a className={styles.Link} href="/newsfeed">
+					<a className={styles.Link} href='/newsfeed'>
 						Новости
 					</a>
 				</li>
 				<li className={styles.Item}>
-					<a className={styles.Link} href="/musiclist">
+					<a className={styles.Link} href='/musiclist'>
 						Музыка
 					</a>
 				</li>
 			</ul>
 			<ul className={styles.Group}>
 				<li className={styles.Item}>
-					<a className={styles.Link} href="/settings">
+					<a className={styles.Link} href='/settings'>
 						Настройки
 					</a>
 				</li>

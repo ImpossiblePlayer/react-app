@@ -1,9 +1,13 @@
 .SideBar {
-  grid-area: sidebar;
+	grid-area: sidebar;
 }
 
 .Group {
-  margin: 15px 0;
-  padding: 10px 0;
-  border-bottom: 2px solid #b3b3b3;
+	margin: 15px 0;
+	padding: 10px 0;
+	border-bottom: 2px solid #b3b3b3;
+}
+
+.Link {
+	text-decoration: none;
 }
