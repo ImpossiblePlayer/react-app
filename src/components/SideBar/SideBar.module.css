@@ -5,9 +5,13 @@
 .Group {
 	margin: 15px 0;
 	padding: 10px 0;
-	border-bottom: 2px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3cc;
 }
 
 .Link {
 	text-decoration: none;
+}
+
+.Link:hover {
+	border-bottom: 2px solid var(--text-color);
 }

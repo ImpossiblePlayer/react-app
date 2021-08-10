@@ -28,7 +28,7 @@ const InfoWrapper = (props) => {
 		<div className={styles.InfoWrapper}>
 			<span className={styles.UserLogo}>
 				{/* аватарка пользователя */}
-				<a href="/profile">
+				<a href='/profile'>
 					<Avatar />
 				</a>
 			</span>
@@ -46,10 +46,7 @@ const Content = (props) => {
 	return (
 		<div className={styles.Content}>
 			{/* текст поста */}
-			<p>
-				{/* пользовательский текст */}
-				{props.content}
-			</p>
+			<p>{props.content}</p>
 
 			{/* картинки (если есть) */}
 			{/* <div className={styles.PostImages}>
@@ -64,23 +61,22 @@ const Stats = (props) => {
 	return (
 		<div className={styles.Stats}>
 			<span className={styles.Likes}>
-				<button title="Like">L</button>
+				<button title='Like'>L</button>
 				<span>{props.likes}</span>
 			</span>
 
 			<span className={styles.Comments}>
-				<button title="Comment">C</button>
+				<button title='Comment'>C</button>
 				<span>{props.comments}</span>
 			</span>
 
 			<span className={styles.Reposts}>
-				<button title="Repost">R</button>
+				<button title='Repost'>R</button>
 				<span>{props.reposts}</span>
 			</span>
 		</div>
 	);
 };
-
 
 // ----------------------------------------------
 // функции																			|
@@ -89,6 +85,5 @@ const Stats = (props) => {
 // const LikesCount = () => {
 // 	let lButton
 // }
-
 
 export { Post };
