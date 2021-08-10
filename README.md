@@ -40,9 +40,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Больше
 
-Узнать больше можно в [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Узнать больше можно в [документации Create-React-App](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Изучайте React на [React documentation](https://reactjs.org/).
+Изучайте React на [официальном сайте](https://reactjs.org/).
 
 ### Code Splitting
 
