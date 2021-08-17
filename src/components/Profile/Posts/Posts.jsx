@@ -27,7 +27,7 @@ const CreatePost = () => {
 				<textarea name='' id='TextArea' cols='30' rows='5'></textarea>
 			</div>
 			{/* кнопка создания */}
-			<button type='submit' id='NewPost' onClick={PostButton}>
+			<button type='submit' id='NewPost' /*onClick={PostButton}*/>
 				Опубликовать
 			</button>
 		</div>
@@ -36,22 +36,37 @@ const CreatePost = () => {
 
 // блок с постами пользователя
 const AllPosts = () => {
+	// ----------------------------------------------
+	// списки данных постов													|
+	// ----------------------------------------------
+
+	let posts = [
+		{
+			content: 'Я создал новый аккаунт!',
+			user: 'Пронин Иван',
+			likes: '15',
+			comments: '5',
+			reposts: '1',
+		},
+		{
+			content: 'Привет!',
+			user: 'Пронин Иван',
+			likes: '10',
+			comments: '23',
+			reposts: '11',
+		},
+	];
 	return (
 		<div className={styles.Container}>
-			<Post
-				content='Я создал новый аккаунт!'
-				username='Пронин Иван'
-				likes='15'
-				comments='5'
-				reposts='1'
-			/>
-			<Post
-				content='Привет!'
-				username='Пронин Иван'
-				likes='10'
-				comments='23'
-				reposts='11'
-			/>
+			{posts.map((post) => (
+				<Post
+					content={post.content}
+					username={post.user}
+					likes={post.likes}
+					comments={post.comments}
+					reposts={post.reposts}
+				/>
+			))}
 		</div>
 	);
 };
@@ -65,13 +80,10 @@ const PostButton = () => {
 	let Text = document.getElementById('TextArea').value;
 	// const post = <Post content={Text} username='Пронин Иван' />;
 
-	// Добавляем новый элемент в конец элемента-родителя
-	ReactDOM.render(
-		<React.StrictMode>
-			<Post content={Text} username='Пронин Иван' />
-		</React.StrictMode>,
-		document.getElementsByClassName('Container')
-	);
+	// Добавляем новый элемент в начало элемента-родителя
+
+	// сделать добавление в начало амссива нового объекта с данными поста
+	posts.unshift();
 };
 
 export { Posts };

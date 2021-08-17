@@ -25,6 +25,7 @@ ul {
 .AppWrapper {
 	min-width: 720px;
 	max-width: 70%;
+	min-height: 100%;
 	margin: 0 auto;
 	display: grid;
 
