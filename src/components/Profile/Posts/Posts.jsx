@@ -1,7 +1,9 @@
 import React from 'react';
 import { ReactDOM } from 'react-dom';
-import { Post } from './Post/Post';
+
 import styles from './Posts.module.css';
+
+import { Post } from './Post/Post';
 
 const Posts = () => {
 	return (
@@ -59,14 +61,17 @@ const AllPosts = () => {
 // ----------------------------------------------
 
 // функия для создания нового поста
-const PostButton = (event) => {
+const PostButton = () => {
 	let Text = document.getElementById('TextArea').value;
-	let Container = document.getElementsByClassName('Container');
-
-	const post = <Post content={Text} username='Пронин Иван' />;
+	// const post = <Post content={Text} username='Пронин Иван' />;
 
 	// Добавляем новый элемент в конец элемента-родителя
-	ReactDOM.render(<Post content={Text} username='Пронин Иван' />, Container);
+	ReactDOM.render(
+		<React.StrictMode>
+			<Post content={Text} username='Пронин Иван' />
+		</React.StrictMode>,
+		document.getElementsByClassName('Container')
+	);
 };
 
 export { Posts };

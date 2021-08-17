@@ -3,8 +3,8 @@
 }
 
 .Group {
-	margin: 15px 0;
-	padding: 10px 0;
+	margin: 0 0 15px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #b3b3b3cc;
 }
 
@@ -12,6 +12,7 @@
 	text-decoration: none;
 }
 
+.Link.Active,
 .Link:hover {
 	border-bottom: 2px solid var(--text-color);
 }

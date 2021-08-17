@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styles from './Post.module.css';
+
 import Avatar from '../../../Avatar/Avatar';
 
 const Post = (props) => {
