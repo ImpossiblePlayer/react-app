@@ -1,19 +1,21 @@
 import React from 'react';
-import styles from './Header.module.css';
+
 import { NavLink } from 'react-router-dom';
+
+import styles from './Header.module.css';
 
 const Header = () => {
 	return (
 		<header className={styles.Header}>
 			{/* логотип с ссылкой на главную страницу */}
-			<div className={styles.Logo}>
-				<NavLink to='/'>
-					<span>
-						<img src='https://react-native-aria.geekyants.com/img/logo-large.png' />
-					</span>
-					<span>Reactive Network</span>
-				</NavLink>
-			</div>
+
+			<NavLink to='/' className={styles.Logo}>
+				<span>
+					<img src='https://react-native-aria.geekyants.com/img/logo-large.png' />
+				</span>
+				<span>Reactive Network</span>
+			</NavLink>
+
 			{/* форма для поиска */}
 			<form action='' className={styles.SearchForm}>
 				{/* поле ввода */}

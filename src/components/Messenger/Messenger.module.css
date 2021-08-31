@@ -1,0 +1,40 @@
+.Wrapper {
+	display: grid;
+
+	/* 2 колонны: 10 'фракций' (частей) и 2 */
+	grid-template-columns: 10fr 2fr;
+}
+
+.Item {
+	background-color: var(--accent-color);
+	margin: 5px;
+	padding: 5px;
+	border-radius: var(--border-radius);
+}
+
+.MessagesWrapper {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.MessagesWrapper .Item {
+	width: fit-content;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.Avatar {
+	width: 35px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Avatar img {
+	margin-right: 10px;
+}
+
+.Link.Active,
+.Link:hover {
+	border-bottom: 2px solid var(--text-color);
+}

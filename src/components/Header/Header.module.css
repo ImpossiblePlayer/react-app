@@ -5,7 +5,8 @@
 	align-items: center;
 }
 
-.Logo a {
+.Logo {
+	font-size: 24px;
 	width: 250px;
 	display: flex;
 	justify-content: space-between;
@@ -13,7 +14,7 @@
 }
 
 .Logo img {
-	height: 40px
+	height: 40px;
 }
 
 .SearchForm {

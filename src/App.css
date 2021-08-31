@@ -2,6 +2,8 @@
 :root {
 	--text-color: #fff;
 	--bg-color: #2e2e53;
+	--accent-color: #42425e;
+	--border-radius: 5px;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
 
 a {
 	color: inherit;
+	text-decoration: none;
 }
 
 ul {
@@ -34,8 +37,8 @@ ul {
 		'header header'
 		'sidebar main-content';
 
-	/* 2 строки: 60 px и все остальное */
-	grid-template-rows: auto 1fr;
+	/* 2 строки: 60px и все остальное */
+	grid-template-rows: 60px 11fr;
 
 	/* 2 колонны: 2 'фракции' (части) и 10 */
 	grid-template-columns: 2fr 10fr;

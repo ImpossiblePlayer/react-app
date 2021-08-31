@@ -37,7 +37,7 @@ const SideBar = () => {
 		<aside className={styles.SideBar}>
 			<ul className={styles.Group}>
 				{/* каждая ссылка меняет URL, а теги '<Route />' в App.js меняют содержимое в зависимости от текущего URL */}
-				{links1.map((link) => {
+				{links1.map(link => {
 					return (
 						<li className={styles.Item}>
 							<NavLink
@@ -53,7 +53,7 @@ const SideBar = () => {
 			</ul>
 			<ul className={styles.Group}>
 				{/* каждая ссылка меняет URL, а теги '<Route />' в App.js меняют содержимое в зависимости от текущего URL */}
-				{links2.map((link) => {
+				{links2.map(link => {
 					return (
 						<li className={styles.Item}>
 							<NavLink

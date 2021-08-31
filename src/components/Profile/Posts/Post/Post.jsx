@@ -2,9 +2,7 @@ import React from 'react';
 
 import styles from './Post.module.css';
 
-import Avatar from '../../../Avatar/Avatar';
-
-const Post = (props) => {
+const Post = props => {
 	return (
 		<div className={styles.Item}>
 			<InfoWrapper name={props.username} />
@@ -25,14 +23,12 @@ const Post = (props) => {
 // ----------------------------------------------
 
 // блок с инцормацией о пользователе
-const InfoWrapper = (props) => {
+const InfoWrapper = props => {
 	return (
 		<div className={styles.InfoWrapper}>
 			<span className={styles.UserLogo}>
 				{/* аватарка пользователя */}
-				<a href='/profile'>
-					<Avatar />
-				</a>
+				<a href='/profile'>{props.avatar}</a>
 			</span>
 
 			{/* Имя пользователя */}
@@ -44,7 +40,7 @@ const InfoWrapper = (props) => {
 };
 
 // основной контент поста
-const Content = (props) => {
+const Content = props => {
 	return (
 		<div className={styles.Content}>
 			{/* текст поста */}
@@ -59,7 +55,7 @@ const Content = (props) => {
 };
 
 // статистика поста (коментарии, лайки, репосты)
-const Stats = (props) => {
+const Stats = props => {
 	return (
 		<div className={styles.Stats}>
 			<span className={styles.Likes}>
@@ -88,4 +84,4 @@ const Stats = (props) => {
 // 	let lButton
 // }
 
-export { Post };
+export default Post;

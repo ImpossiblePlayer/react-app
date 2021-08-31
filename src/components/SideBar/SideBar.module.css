@@ -1,15 +1,13 @@
 .SideBar {
 	grid-area: sidebar;
+	min-height: 600px;
+	height: fit-content;
 }
 
 .Group {
 	margin: 0 0 15px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #b3b3b3cc;
-}
-
-.Link {
-	text-decoration: none;
 }
 
 .Link.Active,

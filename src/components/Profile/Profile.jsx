@@ -1,16 +1,18 @@
-import React from "react";
-import ProfileHeader from './ProfileHeader/ProfileHeader';
-import { Posts } from "./Posts/Posts.jsx";
-import styles from "./Profile.module.css";
+import React from 'react';
 
-const Profile = () => {
+import styles from './Profile.module.css';
+
+import ProfileHeader from './ProfileHeader/ProfileHeader';
+import UserPosts from './Posts/UserPosts.jsx';
+
+const Profile = props => {
 	return (
 		<div className={styles.Content}>
 			{/* блок с именем и аватаркой */}
-			<ProfileHeader name='Пронин Иван' />
+			<ProfileHeader state={props.state} />
 
 			{/* блок с постами пользователя и создание нового поста */}
-			<Posts />
+			<UserPosts state={props.state} />
 		</div>
 	);
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.css';
@@ -12,7 +12,7 @@ import NewsFeed from './components/NewsFeed/NewsFeed';
 import MusicList from './components/MusicList/MusicList';
 import Settings from './components/Settings/Settings';
 
-const App = () => {
+const App = props => {
 	return (
 		<BrowserRouter>
 			<div className='AppWrapper'>
@@ -21,16 +21,30 @@ const App = () => {
 				{/* блок с основным содержимым (переключается за счет маршрутизации) */}
 				{/* каждая компонента 'Route' анализирует URL, подставляя нужные компоненты */}
 				<main className='Content'>
-					<Route exact path='/' component={Profile} />
-					<Route path='/profile' component={Profile} />
-					<Route path='/messenger' component={Messenger} />
-					<Route path='/newsfeed' component={NewsFeed} />
-					<Route path='/music' component={MusicList} />
-					<Route path='/settings' component={Settings} />
+					<Route
+						exact
+						path='/'
+						render={() => <Profile state={props.state.profileData} />}
+					/>
+					<Route
+						exact
+						path='/profile'
+						render={() => <Profile state={props.state.profileData} />}
+					/>
+					<Route
+						exact
+						path='/messenger'
+						render={() => <Messenger state={props.state.messengerData} />}
+					/>
+					<Route exact path='/newsfeed' render={() => <NewsFeed />} />
+					<Route exact path='/music' render={() => <MusicList />} />
+					<Route exact path='/settings' render={() => <Settings />} />
 				</main>
 			</div>
 		</BrowserRouter>
 	);
 };
+
+// сделать переменные с параметрами
 
 export default App;

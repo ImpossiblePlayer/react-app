@@ -1,45 +1,51 @@
 import React from 'react';
+
 import styles from './Messenger.module.css';
 
-const Messenger = () => {
-	// ----------------------------------------------
-	// списки сообщений и диалоов										|
-	// ----------------------------------------------
-	let messages = [
-		{
-			user: 'Someone',
-			content: 'Привет! Как дела?',
-		},
-		{
-			user: '',
-			content: 'Привет! Все отлично! А как у тебя?',
-		},
-		{
-			user: 'Someone',
-			content: 'Да нормально. Чем занимаешься?',
-		},
-		{
-			user: '',
-			content: 'Да вот, пишу сайт',
-		},
-	];
+import Message from './Message/Message';
+import DialogItem from './DialogItem/DialogItem';
 
-	let dialogs = [
-		{
-			user: 'Someone',
-		},
-		{
-			user: 'Ivan',
-		},
-		{
-			user: 'Dmitry',
-		},
-	];
-
+const Messenger = props => {
 	return (
-		<div className={styles.Messenger}>
-			<div className={styles.Messages}>{messages.map((message) => {})}</div>
-			<div className={styles.Dialogs}>{dialogs.map((dialog) => {})}</div>
+		<div className={styles.Wrapper}>
+			<Messages state={props.state} />
+			<Dialogs state={props.state} />
+		</div>
+	);
+};
+
+// ----------------------------------------------
+// компоненты																		|
+// ----------------------------------------------
+
+// Для каждого объекта в массиве 'messagesData' создает элемент с сообщением
+const Messages = props => {
+	return (
+		<div className={styles.MessagesWrapper}>
+			{props.state.messagesData.map(msg => (
+				<Message
+					id={msg.id}
+					user={msg.user}
+					avatar={msg.avatar}
+					content={msg.content}
+					style={
+						msg.id == 'you'
+							? { alignSelf: 'flexEnd' }
+							: { alignSelf: 'flexStart' }
+					}
+				/>
+			))}
+		</div>
+	);
+};
+
+// Для каждого объекта в массиве 'dialogsData' создает элемент с диалогом
+const Dialogs = props => {
+	return (
+		<div className={styles.Dialogs}>
+			{props.state.dialogsData.map(dlg => (
+				<DialogItem id={dlg.id} user={dlg.user} />
+			))}
 		</div>
 	);
 };

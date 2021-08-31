@@ -1,6 +1,12 @@
 .Item {
-	font-size: 18px;
+	background-color: var(--accent-color);
+	max-width: 600px;
+	width: fit-content;
+	margin: 10px 0;
 	padding: 10px;
+	font-size: 18px;
+	border-radius: var(--border-radius);
+	word-wrap: break-word;
 }
 
 .InfoWrapper {
@@ -17,8 +23,9 @@
 	height: 50px;
 }
 
+/* сделать перенос строки  */
 .Stats {
-	font-size: 24px;
+	font-size: 18px;
 	width: 250px;
 	display: flex;
 	justify-content: space-between;
