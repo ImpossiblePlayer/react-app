@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.css';
@@ -16,7 +16,7 @@ const App = props => {
 	return (
 		<BrowserRouter>
 			<div className='AppWrapper'>
-				<Header />
+				<Header funcs={props.funcs} />
 				<SideBar />
 				{/* блок с основным содержимым (переключается за счет маршрутизации) */}
 				{/* каждая компонента 'Route' анализирует URL, подставляя нужные компоненты */}
@@ -24,17 +24,26 @@ const App = props => {
 					<Route
 						exact
 						path='/'
-						render={() => <Profile state={props.state.profileData} />}
+						render={() => (
+							<Profile state={props.state.profileData} funcs={props.funcs} />
+						)}
 					/>
 					<Route
 						exact
 						path='/profile'
-						render={() => <Profile state={props.state.profileData} />}
+						render={() => (
+							<Profile state={props.state.profileData} funcs={props.funcs} />
+						)}
 					/>
 					<Route
 						exact
 						path='/messenger'
-						render={() => <Messenger state={props.state.messengerData} />}
+						render={() => (
+							<Messenger
+								state={props.state.messengerData}
+								funcs={props.funcs}
+							/>
+						)}
 					/>
 					<Route exact path='/newsfeed' render={() => <NewsFeed />} />
 					<Route exact path='/music' render={() => <MusicList />} />

@@ -1,10 +1,21 @@
-import Avatar from '../components/Avatar/Avatar';
+import Avatar from '../img/Avatar.jpg';
+import SendButton from '../img/SendButton.png';
+
+import { rerenderEntireTree } from '../render';
+
+let avatarPic = <img src={Avatar} alt='' style={{ borderRadius: '50%' }} />;
+let sendPic = (
+	<img src={SendButton} alt='отправить' style={{ height: 'inherit' }} />
+);
 
 // Здесь хранятся все данные, объедененные в объект
 let state = {
 	// данные профиля
 	profileData: {
-		userData: { userName: 'Пронин Иван', avatar: <Avatar /> },
+		userData: {
+			userName: 'Пронин Иван',
+			avatar: avatarPic,
+		},
 
 		// список постов
 		postsData: [
@@ -29,35 +40,46 @@ let state = {
 				reposts: 11,
 			},
 		],
+
+		newPostText: 'hi',
 	},
 
 	// данные мессенджера
 	messengerData: {
+		// картинки, используещиеся в мессенджере
+		img: {
+			sendButton: sendPic,
+		},
+
 		// список сообщений
 		messagesData: [
+			{ content: 'Привет! Как дела?', id: '', avatar: '' },
 			{
-				id: 'you',
-				avatar: Avatar,
-				content: 'Да вот, пишу сайт',
-			},
-			{
-				id: '',
-				avatar: '',
-				content: 'Да нормально. Чем занимаешься?',
-			},
-			{
-				id: 'you',
-				avatar: Avatar,
 				content: 'Привет! Все отлично! А как у тебя?',
+				id: 'you',
+				avatar: avatarPic,
 			},
-			{
-				id: '',
-				avatar: '',
-				content: 'Привет! Как дела?',
-			},
+			{ content: 'Да нормально. Чем занимаешься?', id: '', avatar: '' },
+
+			{ content: 'Да вот, пишу сайт', id: 'you', avatar: avatarPic },
 		],
 		// список диалоов
 		dialogsData: [{ user: 'Someone' }, { user: 'Ivan' }, { user: 'Dmitry' }],
+	},
+};
+
+export let functions = {
+	// получает дочерний элемент объекта 'state'
+	// и добавляет в его конец объект с данными,
+	// обновляя DOM
+	addData: (array, data) => {
+		array.push(data);
+		rerenderEntireTree(state, functions);
+	},
+
+	updateNewPostText: newText => {
+		state.profileData.newPostText = newText;
+		rerenderEntireTree(state, functions);
 	},
 };
 

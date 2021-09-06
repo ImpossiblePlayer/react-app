@@ -17,12 +17,12 @@
 	height: 40px;
 }
 
-.SearchForm {
+.SearchArea {
 	background: #ffffff;
 	height: 30px;
 }
 
-.SearchForm input {
+.SearcArea textarea {
 	border: none;
 	height: 30px;
 	margin: 0;

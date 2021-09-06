@@ -26,7 +26,7 @@ const Post = props => {
 const InfoWrapper = props => {
 	return (
 		<div className={styles.InfoWrapper}>
-			<span className={styles.UserLogo}>
+			<span className={styles.Avatar}>
 				{/* аватарка пользователя */}
 				<a href='/profile'>{props.avatar}</a>
 			</span>
@@ -56,6 +56,10 @@ const Content = props => {
 
 // статистика поста (коментарии, лайки, репосты)
 const Stats = props => {
+	const LikesCount = () => {
+		let lButton;
+	};
+
 	return (
 		<div className={styles.Stats}>
 			<span className={styles.Likes}>
@@ -75,13 +79,5 @@ const Stats = props => {
 		</div>
 	);
 };
-
-// ----------------------------------------------
-// функции																			|
-// ----------------------------------------------
-
-// const LikesCount = () => {
-// 	let lButton
-// }
 
 export default Post;

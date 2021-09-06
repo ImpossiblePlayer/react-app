@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Profile.module.css';
 
 import ProfileHeader from './ProfileHeader/ProfileHeader';
-import UserPosts from './Posts/UserPosts.jsx';
+import UserPosts from './UserPosts/UserPosts.jsx';
 
 const Profile = props => {
 	return (
@@ -12,7 +12,7 @@ const Profile = props => {
 			<ProfileHeader state={props.state} />
 
 			{/* блок с постами пользователя и создание нового поста */}
-			<UserPosts state={props.state} />
+			<UserPosts state={props.state} funcs={props.funcs} />
 		</div>
 	);
 };

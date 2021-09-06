@@ -1,25 +1,29 @@
 import React from 'react';
-
 import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.css';
 
 const Header = () => {
+	let searchArea = React.createRef();
+
 	return (
 		<header className={styles.Header}>
 			{/* логотип с ссылкой на главную страницу */}
 
 			<NavLink to='/' className={styles.Logo}>
 				<span>
-					<img src='https://react-native-aria.geekyants.com/img/logo-large.png' />
+					<img
+						src='https://react-native-aria.geekyants.com/img/logo-large.png'
+						alt=''
+					/>
 				</span>
 				<span>Reactive Network</span>
 			</NavLink>
 
-			{/* форма для поиска */}
-			<form action='' className={styles.SearchForm}>
+			{/* поиск */}
+			<div action='' className={styles.SearchWrapper}>
 				{/* поле ввода */}
-				<input type='text' placeholder='Поиск' />
+				<textarea ref={searchArea} placeholder='Поиск' value />
 				{/* кнопка поиска */}
 				<button type='submit' className={styles.SearchButton}>
 					<img
@@ -27,7 +31,7 @@ const Header = () => {
 						alt=''
 					/>
 				</button>
-			</form>
+			</div>
 		</header>
 	);
 };

@@ -12,15 +12,67 @@
 	border-radius: var(--border-radius);
 }
 
+.Link.Active,
+.Link:hover {
+	border-bottom: 2px solid var(--text-color);
+}
+
+.MessengerWrapper {
+	display: grid;
+	grid-template-rows: 60vh auto;
+	align-content: space-between;
+	height: fill;
+}
+
 .MessagesWrapper {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.MessagesWrapper::-webkit-scrollbar {
+	width: 7px;
+}
+
+.MessagesWrapper::-webkit-scrollbar-thumb {
+	width: 7px;
+	background-color: #f9f9f9;
 }
 
 .MessagesWrapper .Item {
 	width: fit-content;
 	margin-bottom: 10px;
 	padding: 10px;
+}
+
+.MessageInputArea {
+	display: flex;
+	justify-content: space-between;
+	align-self: flex-end;
+	padding: 10px;
+	height: auto;
+	border-radius: var(--border-radius);
+	background-color: var(--accent-color);
+}
+
+.MessageInputArea .MessageInput {
+	width: fill;
+	height: auto;
+	resize: horizontal;
+	overflow: auto;
+	border-radius: var(--border-radius);
+}
+
+.MessageInputArea .MessageInput:active {
+	border: none;
+}
+
+.MessageInputArea .SendButton {
+	align-self: flex-end;
+	width: max-content;
+	height: 50px;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 .Avatar {
@@ -32,9 +84,4 @@
 
 .Avatar img {
 	margin-right: 10px;
-}
-
-.Link.Active,
-.Link:hover {
-	border-bottom: 2px solid var(--text-color);
 }

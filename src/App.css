@@ -20,6 +20,14 @@ ul {
 	padding: 0;
 }
 
+button {
+	border: none;
+}
+
+textarea {
+	border: none;
+}
+
 .AppWrapper > * {
 	background-color: var(--bg-color);
 	padding: 10px;
