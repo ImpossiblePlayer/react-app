@@ -41,7 +41,8 @@ let state = {
 			},
 		],
 
-		newPostText: 'hi',
+		// используется для обновления 'state' при создании нового поста
+		newPostText: '',
 	},
 
 	// данные мессенджера
@@ -63,22 +64,50 @@ let state = {
 
 			{ content: 'Да вот, пишу сайт', id: 'you', avatar: avatarPic },
 		],
+
+		// используется для обновления 'state' при отправке сообщения
+		newMessageText: '',
+
 		// список диалоов
 		dialogsData: [{ user: 'Someone' }, { user: 'Ivan' }, { user: 'Dmitry' }],
 	},
 };
 
 export let functions = {
-	// получает дочерний элемент объекта 'state'
-	// и добавляет в его конец объект с данными,
-	// обновляя DOM
-	addData: (array, data) => {
-		array.push(data);
+	// получает контен поста и добавляет его, обновляя DOM
+	addPost: text => {
+		state.profileData.postsData.push({
+			content: text,
+			likes: 0,
+			comments: 0,
+			reposts: 0,
+		});
+
+		state.profileData.newPostText = '';
 		rerenderEntireTree(state, functions);
 	},
 
-	updateNewPostText: newText => {
-		state.profileData.newPostText = newText;
+	// получает контен сообщения и добавляет его, обновляя DOM
+	addMessage: text => {
+		state.messengerData.messagesData.push({
+			content: text,
+			id: '',
+			avatar: '',
+		});
+
+		state.messengerData.newMessageText = '';
+		rerenderEntireTree(state, functions);
+	},
+
+	// при каждом нажатии клавиши обновляет текст поста в 'state'
+	updateNewPostText: newPostText => {
+		state.profileData.newPostText = newPostText;
+		rerenderEntireTree(state, functions);
+	},
+
+	// при каждом нажатии клавиши обновляет текст сообщения в 'state'
+	updateNewMessage: newMessageText => {
+		state.messengerData.newMessageText = newMessageText;
 		rerenderEntireTree(state, functions);
 	},
 };

@@ -22,17 +22,21 @@ const Messenger = props => {
 const Messages = props => {
 	let messageInput = React.createRef();
 
+	// функция для создания нового поста
 	const addMessage = () => {
+		// получает текст из '<textarea/>'
 		let text = messageInput.current.value;
 
+		// если есть текст, создает новое сообщение
 		if (text) {
-			props.funcs.addData(props.state.messagesData, {
-				id: '',
-				avatar: '',
-				content: text,
-			});
-			messageInput.current.value = '';
+			props.funcs.addMessage(text);
 		}
+	};
+
+	// при каждом нажатии клавиши обновляет текст сообщения в 'state'
+	const messageChange = () => {
+		let text = messageInput.current.value;
+		props.funcs.updateNewMessage(text);
 	};
 
 	return (
@@ -48,16 +52,16 @@ const Messages = props => {
 								? { alignSelf: 'flexEnd' }
 								: { alignSelf: 'flexStart' }
 						}
-						placeHolder='Сообщение'
 					/>
 				))}
 			</div>
 			<div className={styles.MessageInputArea}>
 				<textarea
-					rows='auto'
-					name=''
+					placeHolder='Сообщение'
+					value={props.state.newMessageText}
 					ref={messageInput}
 					className={styles.MessageInput}
+					onChange={messageChange}
 				/>
 				<button
 					type='button'

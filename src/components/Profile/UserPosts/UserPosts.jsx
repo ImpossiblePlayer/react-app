@@ -22,22 +22,17 @@ const CreatePost = props => {
 	let postInput = React.createRef();
 
 	// функия для создания нового поста
-
 	const addPost = () => {
+		// получает текст из '<textarea/>'
 		let text = postInput.current.value;
 
+		// если текст есть, создает новый пост
 		if (text) {
-			props.funcs.addData(props.state.postsData, {
-				content: text,
-				likes: 0,
-				comments: 0,
-				reposts: 0,
-			});
-			postInput.current.value = '';
+			props.funcs.addPost(text);
 		}
 	};
 
-	// обработчик изменений значения поста
+	// при каждом нажатии клавиши обновляет текст поста в 'state'
 	const postChange = () => {
 		let text = postInput.current.value;
 		props.funcs.updateNewPostText(text);
@@ -48,8 +43,6 @@ const CreatePost = props => {
 			{/* ввод текста */}
 			<div>
 				<textarea
-					name=''
-					ref={postInput}
 					cols='30'
 					rows='5'
 					placeHolder={
@@ -61,6 +54,7 @@ const CreatePost = props => {
 						'Введите текст поста'
 					}
 					value={props.state.newPostText}
+					ref={postInput}
 					onChange={postChange}
 				/>
 			</div>
