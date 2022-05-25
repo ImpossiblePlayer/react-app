@@ -75,7 +75,7 @@ let state = {
 
 export let functions = {
 	// получает контен поста и добавляет его, обновляя DOM
-	addPost: text => {
+	addPost: (text) => {
 		state.profileData.postsData.push({
 			content: text,
 			likes: 0,
@@ -88,7 +88,7 @@ export let functions = {
 	},
 
 	// получает контен сообщения и добавляет его, обновляя DOM
-	addMessage: text => {
+	addMessage: (text) => {
 		state.messengerData.messagesData.push({
 			content: text,
 			id: '',
@@ -100,13 +100,13 @@ export let functions = {
 	},
 
 	// при каждом нажатии клавиши обновляет текст поста в 'state'
-	updateNewPostText: newPostText => {
+	updateNewPostText: (newPostText) => {
 		state.profileData.newPostText = newPostText;
 		rerenderEntireTree(state, functions);
 	},
 
 	// при каждом нажатии клавиши обновляет текст сообщения в 'state'
-	updateNewMessage: newMessageText => {
+	updateNewMessage: (newMessageText) => {
 		state.messengerData.newMessageText = newMessageText;
 		rerenderEntireTree(state, functions);
 	},

@@ -6,7 +6,7 @@ import styles from '../Messenger.module.css';
 // сюда приходит объект, включающий id, avatar, user и content
 const Message = props => {
 	return (
-		<div className={styles.Item}>
+		<div className={styles.Item} style={props.style}>
 			<Link to={props.id} className={styles.Avatar}>
 				<img src={props.avatar} alt='' />
 				{props.user}

@@ -4,7 +4,7 @@
 
 ## Available Scripts
 
-In the project directory, you can run:
+В папке проэкта вы можете запустить:
 
 ### `yarn start`
 

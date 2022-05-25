@@ -5,7 +5,7 @@ import styles from './Messenger.module.css';
 import Message from './Message/Message';
 import DialogItem from './DialogItem/DialogItem';
 
-const Messenger = props => {
+const Messenger = (props) => {
 	return (
 		<div className={styles.Wrapper}>
 			<Messages state={props.state} funcs={props.funcs} />
@@ -19,7 +19,7 @@ const Messenger = props => {
 // ----------------------------------------------
 
 // Для каждого объекта в массиве 'messagesData' создает элемент с сообщением
-const Messages = props => {
+const Messages = (props) => {
 	let messageInput = React.createRef();
 
 	// функция для создания нового поста
@@ -42,13 +42,13 @@ const Messages = props => {
 	return (
 		<div className={styles.MessengerWrapper}>
 			<div className={styles.MessagesWrapper}>
-				{props.state.messagesData.map(msg => (
+				{props.state.messagesData.map((msg) => (
 					<Message
 						id={msg.id}
 						avatar={msg.avatar}
 						content={msg.content}
-						style={
-							msg.id === 'you'
+						styles={
+							msg.id == 'you'
 								? { alignSelf: 'flexEnd' }
 								: { alignSelf: 'flexStart' }
 						}
@@ -60,8 +60,8 @@ const Messages = props => {
 					placeHolder='Сообщение'
 					value={props.state.newMessageText}
 					ref={messageInput}
-					className={styles.MessageInput}
 					onChange={messageChange}
+					className={styles.MessageInput}
 				/>
 				<button
 					type='button'
@@ -77,10 +77,10 @@ const Messages = props => {
 };
 
 // Для каждого объекта в массиве 'dialogsData' создает элемент с диалогом
-const Dialogs = props => {
+const Dialogs = (props) => {
 	return (
 		<div className={styles.Dialogs}>
-			{props.state.dialogsData.map(dlg => (
+			{props.state.dialogsData.map((dlg) => (
 				<DialogItem id={dlg.id} user={dlg.user} />
 			))}
 		</div>
