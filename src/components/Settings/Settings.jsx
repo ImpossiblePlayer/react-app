@@ -6,4 +6,4 @@ const Settings = () => {
 	return <div></div>;
 };
 
-export default Settings;
+export { Settings };

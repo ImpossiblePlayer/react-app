@@ -48,7 +48,7 @@ const Messages = (props) => {
 						avatar={msg.avatar}
 						content={msg.content}
 						styles={
-							msg.id == 'you'
+							msg.id === 'you'
 								? { alignSelf: 'flexEnd' }
 								: { alignSelf: 'flexStart' }
 						}
@@ -87,4 +87,4 @@ const Dialogs = (props) => {
 	);
 };
 
-export default Messenger;
+export { Messenger };
