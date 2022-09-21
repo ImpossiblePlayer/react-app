@@ -2,10 +2,10 @@ import React from 'react';
 
 import styles from './Profile.module.css';
 
-import ProfileHeader from './ProfileHeader/ProfileHeader';
-import UserPosts from './UserPosts/UserPosts.jsx';
+import ProfileHeader from './ProfileHeader';
+import UserPosts from './UserPosts';
 
-const Profile = props => {
+const Profile = (props) => {
 	return (
 		<div className={styles.Content}>
 			{/* блок с именем и аватаркой */}

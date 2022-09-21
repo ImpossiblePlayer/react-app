@@ -2,12 +2,12 @@ import React from 'react';
 
 import styles from './ProfileHeader.module.css';
 
-const ProfileHeader = props => {
+const ProfileHeader = (props) => {
 	return (
 		<header className={styles.Header}>
 			{/* блок с именем и аватаркой */}
 			<div className={styles.UserInfoWrapper}>
-				<a href='' className={styles.UserAvatar}>
+				<a className={styles.UserAvatar}>
 					{/* аватарка пользователя */}
 					{props.state.userData.avatar}
 				</a>
