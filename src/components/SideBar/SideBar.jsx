@@ -39,12 +39,8 @@ const SideBar = () => {
 				{/* каждая ссылка меняет URL, а теги '<Route />' в App.js меняют содержимое в зависимости от текущего URL */}
 				{links1.map((link) => {
 					return (
-						<li className={styles.Item}>
-							<NavLink
-								to={link.path}
-								className={styles.Link}
-								activeClassName={styles.Active}
-							>
+						<li className={styles.Item} key={link.path}>
+							<NavLink to={link.path} className={styles.Link}>
 								{link.text}
 							</NavLink>
 						</li>
@@ -55,12 +51,8 @@ const SideBar = () => {
 				{/* каждая ссылка меняет URL, а теги '<Route />' в App.js меняют содержимое в зависимости от текущего URL */}
 				{links2.map((link) => {
 					return (
-						<li className={styles.Item}>
-							<NavLink
-								to={link.path}
-								className={styles.Link}
-								activeClassName={styles.Active}
-							>
+						<li className={styles.Item} key={link.path}>
+							<NavLink to={link.path} className={styles.Link}>
 								{link.text}
 							</NavLink>
 						</li>

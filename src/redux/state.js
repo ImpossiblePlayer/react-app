@@ -24,6 +24,7 @@ let state = {
 				likes: 15,
 				comments: 5,
 				reposts: 1,
+				id: 1,
 			},
 			{
 				content:
@@ -31,6 +32,7 @@ let state = {
 				likes: 1,
 				comments: 23,
 				reposts: 11,
+				id: 2,
 			},
 			{
 				content:
@@ -38,6 +40,7 @@ let state = {
 				likes: 10,
 				comments: 23,
 				reposts: 11,
+				id: 3,
 			},
 		],
 
@@ -73,7 +76,7 @@ let state = {
 	},
 };
 
-export let functions = {
+let functions = {
 	// получает контен поста и добавляет его, обновляя DOM
 	addPost: (text) => {
 		state.profileData.postsData.push({
@@ -112,4 +115,4 @@ export let functions = {
 	},
 };
 
-export default state;
+export { state, functions };

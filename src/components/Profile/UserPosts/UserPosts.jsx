@@ -45,7 +45,7 @@ const CreatePost = (props) => {
 				<textarea
 					cols='30'
 					rows='5'
-					placeHolder={
+					placeholder={
 						// [
 						// 	'Чем хотите поделиться?',
 						// 	'Текст сегодняшнего поста',
@@ -74,6 +74,7 @@ const AllPosts = (props) => {
 		<div className={styles.PostsWrapper}>
 			{props.state.postsData.map((post) => (
 				<Post
+					key={post.id}
 					username={props.state.userData.username}
 					avatar={props.state.userData.avatar}
 					content={post.content}

@@ -21,7 +21,7 @@
 	display: grid;
 	grid-template-rows: 60vh auto;
 	align-content: space-between;
-	height: fill;
+	height: stretch;
 }
 
 .MessagesWrapper {
@@ -57,7 +57,7 @@
 }
 
 .MessageInputArea .MessageInput {
-	width: fill;
+	width: stretch;
 	height: auto;
 	resize: horizontal;
 	overflow: auto;

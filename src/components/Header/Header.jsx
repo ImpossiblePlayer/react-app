@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = () => {
-	let searchArea = React.createRef();
+	// let searchArea = React.createRef();
 
 	return (
 		<header className={styles.Header}>
@@ -23,7 +23,7 @@ const Header = () => {
 			{/* поиск */}
 			<div action='' className={styles.SearchWrapper}>
 				{/* поле ввода */}
-				<textarea ref={searchArea} placeholder='Поиск' value />
+				<textarea placeholder='Поиск' />
 				{/* кнопка поиска */}
 				<button type='submit' className={styles.SearchButton}>
 					<img

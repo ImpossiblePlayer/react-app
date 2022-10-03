@@ -11,7 +11,7 @@ export const rerenderEntireTree = (state, functions) => {
 	root.render(
 		<React.StrictMode>
 			<BrowserRouter>
-				<App />
+				<App state={state} funcs={functions} />
 			</BrowserRouter>
 		</React.StrictMode>
 	);
