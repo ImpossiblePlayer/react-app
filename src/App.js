@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import './App.css';
+import styles from './App.module.css';
 
 // Компоненты основного блока
 import { Header } from './components/Header';
@@ -13,32 +13,30 @@ import { MusicList } from './components/MusicList';
 import { Settings } from './components/Settings';
 
 const App = ({ state, funcs }) => {
+	console.log(state);
 	return (
-		<div className='AppWrapper'>
+		<div className={styles.AppWrapper}>
 			<Header funcs={funcs} />
 			<SideBar />
 			{/* блок с основным содержимым (переключается за счет маршрутизации) */}
 			{/* каждая компонента 'Route' анализирует URL, подставляя нужные компоненты */}
-			<main className='Content'>
+			<Routes className={styles.Content}>
 				<Route
-					exact
 					path='/'
-					render={() => <Profile state={state.profileData} funcs={funcs} />}
+					element={<Profile state={state.profileData} funcs={funcs} />}
 				/>
 				<Route
-					exact
 					path='/profile'
-					render={() => <Profile state={state.profileData} funcs={funcs} />}
+					element={<Profile state={state.profileData} funcs={funcs} />}
 				/>
 				<Route
-					exact
 					path='/messenger'
-					render={() => <Messenger state={state.messengerData} funcs={funcs} />}
+					element={<Messenger state={state.messengerData} funcs={funcs} />}
 				/>
-				<Route exact path='/newsfeed' render={() => <NewsFeed />} />
-				<Route exact path='/music' render={() => <MusicList />} />
-				<Route exact path='/settings' render={() => <Settings />} />
-			</main>
+				<Route path='/newsfeed' element={<NewsFeed />} />
+				<Route path='/music' element={<MusicList />} />
+				<Route path='/settings' element={<Settings />} />
+			</Routes>
 		</div>
 	);
 };

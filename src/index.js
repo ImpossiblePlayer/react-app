@@ -1,4 +1,4 @@
-import state, { functions } from './redux/state';
+import { state, functions } from './redux/state';
 import { rerenderEntireTree } from './render';
 rerenderEntireTree(state, functions);
 // If you want to start measuring performance in your app, pass a function

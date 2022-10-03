@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Post.module.css';
 
-const Post = props => {
+const Post = (props) => {
 	return (
 		<div className={styles.Item}>
 			<InfoWrapper name={props.username} />
@@ -23,7 +23,7 @@ const Post = props => {
 // ----------------------------------------------
 
 // блок с инцормацией о пользователе
-const InfoWrapper = props => {
+const InfoWrapper = (props) => {
 	return (
 		<div className={styles.InfoWrapper}>
 			<span className={styles.Avatar}>
@@ -40,7 +40,7 @@ const InfoWrapper = props => {
 };
 
 // основной контент поста
-const Content = props => {
+const Content = (props) => {
 	return (
 		<div className={styles.Content}>
 			{/* текст поста */}
@@ -55,10 +55,10 @@ const Content = props => {
 };
 
 // статистика поста (коментарии, лайки, репосты)
-const Stats = props => {
-	const LikesCount = () => {
-		let lButton;
-	};
+const Stats = (props) => {
+	// const LikesCount = () => {
+	// 	let lButton;
+	// };
 
 	return (
 		<div className={styles.Stats}>
