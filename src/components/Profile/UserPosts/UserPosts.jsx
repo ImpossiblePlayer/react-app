@@ -4,7 +4,7 @@ import styles from './UserPosts.module.css';
 
 import Post from './Post/Post';
 
-const Posts = props => {
+const UserPosts = (props) => {
 	return (
 		<div className={styles.Wrapper}>
 			<CreatePost state={props.state} funcs={props.funcs} />
@@ -18,7 +18,7 @@ const Posts = props => {
 // ----------------------------------------------
 
 //поле для создания нового поста
-const CreatePost = props => {
+const CreatePost = (props) => {
 	let postInput = React.createRef();
 
 	// функия для создания нового поста
@@ -69,10 +69,10 @@ const CreatePost = props => {
 };
 
 // Для каждого объекта в массиве 'postsData' создает элемент с постом
-const AllPosts = props => {
+const AllPosts = (props) => {
 	return (
 		<div className={styles.PostsWrapper}>
-			{props.state.postsData.map(post => (
+			{props.state.postsData.map((post) => (
 				<Post
 					username={props.state.userData.username}
 					avatar={props.state.userData.avatar}
@@ -86,4 +86,4 @@ const AllPosts = props => {
 	);
 };
 
-export default Posts;
+export { UserPosts };

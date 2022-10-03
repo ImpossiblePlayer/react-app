@@ -2,8 +2,8 @@ import React from 'react';
 
 import styles from './Profile.module.css';
 
-import ProfileHeader from './ProfileHeader';
-import UserPosts from './UserPosts';
+import { ProfileHeader } from './ProfileHeader';
+import { UserPosts } from './UserPosts';
 
 const Profile = (props) => {
 	return (
@@ -17,4 +17,4 @@ const Profile = (props) => {
 	);
 };
 
-export default Profile;
+export { Profile };

@@ -6,4 +6,4 @@ const NewsFeed = () => {
 	return <div></div>;
 };
 
-export default NewsFeed;
+export { NewsFeed };

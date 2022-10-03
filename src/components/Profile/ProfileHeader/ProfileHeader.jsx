@@ -18,4 +18,4 @@ const ProfileHeader = (props) => {
 	);
 };
 
-export default ProfileHeader;
+export { ProfileHeader };
